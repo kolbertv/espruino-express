@@ -1,0 +1,25 @@
+{
+  "plugins": [
+    ["@babel/plugin-proposal-object-rest-spread", { "useBuiltIns": true }],
+    "@babel/plugin-transform-block-scoped-functions",
+    [
+      "@babel/plugin-transform-block-scoping",
+      {
+        "throwIfClosureRequired": true
+      }
+    ],
+    ["@babel/plugin-transform-spread", {}],
+    [
+      "@babel/plugin-transform-destructuring",
+      { "loose": true, "useBuiltIns": true }
+    ],
+    "@babel/plugin-transform-parameters",
+    "@babel/plugin-transform-shorthand-properties",
+    [
+      "module:fast-async",
+      {
+        "spec": true
+      }
+    ]
+  ]
+}
