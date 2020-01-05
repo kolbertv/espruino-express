@@ -5,8 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start_min": "rollup -c && node ./build/bundle.min.js",
+    "start": "rollup -c && node ./build/bundle.js",
     "build": "rollup -c",
-    "watch16": "rollup -c && espruino -b 115200 -p COM16 ./build/bundle.min.js --watch"
+    "watch16": "rollup -c && espruino -b 115200 -p COM16 ./build/bundle.js --watch",
+    "watch16_min": "rollup -c && espruino -b 115200 -p COM16 ./build/bundle.min.js --watch"
   },
   "repository": {
     "type": "git",
