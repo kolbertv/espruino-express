@@ -2,9 +2,14 @@
   "name": "espruino-express",
   "version": "0.0.1",
   "description": "Very light web application framework for Espruino.",
-  "main": "main.js",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start_min": "rollup -c && node ./build/bundle.min.js",
+    "start": "rollup -c && node ./build/bundle.js",
+    "build": "rollup -c",
+    "watch16": "rollup -c && espruino -b 115200 -p COM16 ./build/bundle.js --watch",
+    "watch16_min": "rollup -c && espruino -b 115200 -p COM16 ./build/bundle.min.js --watch"
   },
   "repository": {
     "type": "git",
@@ -22,5 +27,26 @@
   "bugs": {
     "url": "https://github.com/kolbertv/espruino-express/issues"
   },
-  "homepage": "https://github.com/kolbertv/espruino-express#readme"
+  "homepage": "https://github.com/kolbertv/espruino-express#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.7.7",
+    "@babel/core": "^7.7.7",
+    "@babel/plugin-proposal-object-rest-spread": "^7.7.7",
+    "@babel/plugin-transform-block-scoped-functions": "^7.7.4",
+    "@babel/plugin-transform-block-scoping": "^7.7.4",
+    "@babel/plugin-transform-destructuring": "^7.7.4",
+    "@babel/plugin-transform-parameters": "^7.7.7",
+    "@babel/plugin-transform-runtime": "^7.7.6",
+    "@babel/plugin-transform-shorthand-properties": "^7.7.4",
+    "@babel/plugin-transform-spread": "^7.7.4",
+    "@babel/preset-env": "^7.7.7",
+    "@babel/runtime": "^7.7.7",
+    "fast-async": "^6.3.8",
+    "javascript-obfuscator": "^0.18.7",
+    "rollup": "^1.27.13",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-obfuscator": "^0.1.0",
+    "rollup-plugin-terser": "^5.1.3"
+  }
 }

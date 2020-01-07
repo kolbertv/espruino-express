@@ -1,0 +1,36 @@
+/* app scss*/
+html,
+body,
+nav,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+img,
+small,
+strong,
+ol,
+ul,
+li,
+form,
+label,
+table,
+caption,
+tr,
+td,
+footer,
+header {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
